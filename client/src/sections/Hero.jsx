@@ -147,7 +147,7 @@ function DeveloperCode({ onShowPhoto }) {
 }
 
 export default function Hero() {
-  const [showCode, setShowCode] = useState(false);
+  const [showCode, setShowCode] = useState(true);
 
   return (
     <section className={styles.heroSection} id="home">
