@@ -1,0 +1,242 @@
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 82px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(16px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.signatureBrand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.signatureLogo {
+  display: block;
+  width: 155px;
+  height: 65px;
+  object-fit: contain;
+  object-position: left center;
+  filter: none;
+  mix-blend-mode: normal;
+  transition: filter 0.3s ease;
+}
+
+:global(html[data-theme="dark"]) .signatureLogo {
+  filter: brightness(0) invert(1);
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-left: auto;
+  margin-right: 28px;
+}
+
+.navigation > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.navigation > a:hover {
+  color: var(--primary);
+}
+
+/* Contact Button */
+
+.navigation .navContact {
+  margin-left: 0;
+  padding: 11px 19px;
+  border-radius: 30px;
+  background: var(--primary);
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.navigation .navContact:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.themeToggle {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.themeToggle:hover {
+  background: var(--surface-alt);
+  transform: rotate(15deg);
+}
+
+.themeToggle svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.mobileMenuToggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface-alt);
+  color: var(--heading);
+  cursor: pointer;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+:global(html[data-theme="dark"]) .header {
+  background: rgba(11, 18, 32, 0.94);
+  border-color: var(--border);
+}
+
+:global(html[data-theme="dark"]) .navigation > a:not(.navContact) {
+  color: var(--text);
+}
+
+:global(html[data-theme="dark"]) .navigation > a:not(.navContact):hover {
+  color: var(--primary);
+}
+
+:global(html[data-theme="dark"]) .themeToggle {
+  color: #facc15;
+  border-color: var(--border);
+}
+
+:global(html[data-theme="dark"]) .themeToggle:hover {
+  background: var(--surface-alt);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+  .header {
+    padding: 0 5%;
+    gap: 18px;
+  }
+
+  .navigation {
+    gap: 19px;
+    margin-right: 18px;
+  }
+
+  .signatureLogo {
+    width: 140px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .header {
+    height: 72px;
+    padding: 0 5%;
+  }
+
+  .signatureLogo {
+    width: 145px;
+    height: auto;
+  }
+
+  .mobileMenuToggle {
+    display: grid;
+    place-items: center;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 12px 5% 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  .navigation.navOpen {
+    display: flex;
+  }
+
+  .navigation > a {
+    padding: 14px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .navigation .navContact {
+    justify-content: center;
+    margin-top: 12px;
+    border: none;
+  }
+
+  .themeToggle {
+    width: 38px;
+    height: 38px;
+  }
+}

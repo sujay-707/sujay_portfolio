@@ -1,11 +1,17 @@
 
 import { ArrowUpRight, FolderGit2 } from "lucide-react";
+
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects";
 
+import styles from "./Projects.module.css";
+
 export default function Projects() {
   return (
-    <section className="projects-section section-padding" id="projects">
+    <section
+      className={`${styles.projectsSection} section-padding`}
+      id="projects"
+    >
       <div className="section-container">
         <div className="section-heading">
           <span className="section-eyebrow">MY RECENT WORK</span>
@@ -20,13 +26,16 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="projects-grid">
+        <div className={styles.projectsGrid}>
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+            />
           ))}
         </div>
 
-        <div className="projects-more">
+        <div className={styles.projectsMore}>
           <a
             href="https://github.com/sujay-707"
             target="_blank"

@@ -8,6 +8,8 @@ import {
   Moon,
 } from "lucide-react";
 
+import styles from "./Navbar.module.css";
+
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
@@ -38,29 +40,32 @@ export default function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   const toggleTheme = () => {
-    setTheme((current) => (current === "light" ? "dark" : "light"));
+    setTheme((current) =>
+      current === "light" ? "dark" : "light"
+    );
   };
 
   return (
-    <header className="header portfolio-header">
+    <header className={styles.header}>
       {/* Signature Brand */}
       <a
         href="#home"
-        className="brand portfolio-brand signature-brand"
+        className={styles.signatureBrand}
         onClick={closeMenu}
         aria-label="Sujay - Home"
       >
         <img
           src="/sujaylogo.png"
           alt="Sujay"
-          className="signature-logo"
+          className={styles.signatureLogo}
         />
       </a>
 
       {/* Navigation */}
       <nav
         id="portfolio-navigation"
-        className={`portfolio-nav ${menuOpen ? "nav-open" : ""}`}
+        className={`${styles.navigation} ${menuOpen ? styles.navOpen : ""
+          }`}
         aria-label="Main navigation"
       >
         {NAV_LINKS.map(({ label, href }) => (
@@ -70,8 +75,10 @@ export default function Navbar() {
         ))}
 
         <a
-          href="mailto:sujaymundaragi7@gmail.com"
-          className="nav-contact"
+          href="https://www.linkedin.com/in/sujay-mundaragi707"
+          className={styles.navContact}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={closeMenu}
         >
           Let's Talk
@@ -82,10 +89,12 @@ export default function Navbar() {
       {/* Theme Toggle */}
       <button
         type="button"
-        className="theme-toggle"
+        className={styles.themeToggle}
         onClick={toggleTheme}
-        aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-        title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+        aria-label={`Switch to ${theme === "light" ? "dark" : "light"
+          } mode`}
+        title={`Switch to ${theme === "light" ? "dark" : "light"
+          } mode`}
       >
         {theme === "light" ? (
           <Moon size={20} />
@@ -97,9 +106,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <button
         type="button"
-        className="mobile-menu-toggle"
+        className={styles.mobileMenuToggle}
         onClick={() => setMenuOpen((previous) => !previous)}
-        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={
+          menuOpen ? "Close navigation menu" : "Open navigation menu"
+        }
         aria-expanded={menuOpen}
         aria-controls="portfolio-navigation"
       >

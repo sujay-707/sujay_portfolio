@@ -1,0 +1,182 @@
+
+.projectCard {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 19px;
+  background: var(--white);
+  box-shadow: 0 8px 28px #173b5e09;
+  transition: 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-7px);
+  border-color: #bfdcf4;
+  box-shadow: 0 20px 45px #173b5e13;
+}
+
+/* Project Image */
+
+.projectImageWrap {
+  position: relative;
+  height: 245px;
+  overflow: hidden;
+  background: var(--blue-light);
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.045);
+}
+
+/* Featured Badge */
+
+.projectFeatured {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 13px;
+  border-radius: 25px;
+  background: white;
+  color: var(--primary-dark);
+  font-size: 10px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px #00000012;
+}
+
+/* Project Content */
+
+.projectContent {
+  padding: 25px;
+}
+
+.projectTech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 17px;
+}
+
+.projectTech span {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: var(--blue-light);
+  color: #3976a9;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.projectContent h3 {
+  margin-bottom: 11px;
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.projectContent > p {
+  min-height: 75px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Project Links */
+
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 19px;
+  border-top: 1px solid var(--border);
+}
+
+.projectLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.projectLinks a:first-child {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.projectLinks a:first-child:hover {
+  background: var(--primary-dark);
+}
+
+.projectLinks a:last-child:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Dark Theme */
+
+:global(html[data-theme="dark"]) .projectCard {
+  background: #1b293b;
+  border-color: #34445a;
+  color: #e5edf7;
+}
+
+:global(html[data-theme="dark"]) .projectContent h3 {
+  color: #f1f5f9;
+}
+
+:global(html[data-theme="dark"]) .projectContent > p {
+  color: #b5c4d8;
+}
+
+:global(html[data-theme="dark"]) .projectLinks a {
+  color: #e5edf7;
+  border-color: #43536a;
+}
+
+:global(html[data-theme="dark"]) .projectLinks a:first-child {
+  color: white;
+  border-color: var(--primary);
+}
+
+:global(html[data-theme="dark"]) .projectFeatured {
+  background: #263c54;
+  color: #93c5fd;
+}
+
+/* Responsive */
+
+@media (max-width: 760px) {
+  .projectImageWrap {
+    height: 230px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectImageWrap {
+    height: 200px;
+  }
+
+  .projectContent {
+    padding: 20px;
+  }
+
+  .projectContent h3 {
+    font-size: 20px;
+  }
+}

@@ -1,33 +1,38 @@
 
 import { ArrowUpRight, Code2 } from "lucide-react";
 
+import styles from "./ProjectCard.module.css";
+
 export default function ProjectCard({ project }) {
   return (
-    <article className="project-card">
-      <div className="project-image-wrap">
+    <article className={styles.projectCard}>
+      <div className={styles.projectImageWrap}>
         <img
           src={project.image}
           alt={`${project.title} preview`}
-          className="project-image"
+          className={styles.projectImage}
           loading="lazy"
         />
 
         {project.featured && (
-          <span className="project-featured">Featured Project</span>
+          <span className={styles.projectFeatured}>
+            Featured Project
+          </span>
         )}
       </div>
 
-      <div className="project-content">
-        <div className="project-tech">
+      <div className={styles.projectContent}>
+        <div className={styles.projectTech}>
           {project.technologies.map((technology) => (
             <span key={technology}>{technology}</span>
           ))}
         </div>
 
         <h3>{project.title}</h3>
+
         <p>{project.description}</p>
 
-        <div className="project-links">
+        <div className={styles.projectLinks}>
           <a
             href={project.live}
             target="_blank"

@@ -10,8 +10,10 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
-
-import "./styles.css";
+import Achievements from "./sections/Achievements";
+import "./styles/variables.css";
+import "./styles/global.css";
+import "./styles/utilities.css";
 
 function App() {
   return (
@@ -22,10 +24,11 @@ function App() {
         <Hero />
         <About />
         <Skills />
+
         <Projects />
+        <Achievements />
         <Contact />
       </main>
-
       <Footer />
     </div>
   );

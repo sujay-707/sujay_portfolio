@@ -7,6 +7,8 @@ import {
   Send,
 } from "lucide-react";
 
+import styles from "./Contact.module.css";
+
 const contactDetails = [
   {
     icon: Mail,
@@ -79,7 +81,10 @@ function GmailLogo() {
 
 export default function Contact() {
   return (
-    <section className="contact-section section-padding" id="contact">
+    <section
+      className={`${styles.contactSection} section-padding`}
+      id="contact"
+    >
       <div className="section-container">
         <div className="section-heading">
           <span className="section-eyebrow">GET IN TOUCH</span>
@@ -94,9 +99,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="contact-card">
-          <div className="contact-message">
-            <span className="contact-icon">
+        <div className={styles.contactCard}>
+          <div className={styles.contactMessage}>
+            <span className={styles.contactIcon}>
               <Send size={25} />
             </span>
 
@@ -109,20 +114,23 @@ export default function Contact() {
 
             <a
               href="mailto:sujaymundaragi7@gmail.com?subject=Let's%20Connect"
-              className="contact-primary-btn"
+              className={styles.contactPrimaryBtn}
             >
               Say Hello
               <ArrowUpRight size={18} />
             </a>
           </div>
 
-          <div className="contact-details">
+          <div className={styles.contactDetails}>
             {contactDetails.map((detail) => {
               const Icon = detail.icon;
 
               return (
-                <div className="contact-detail" key={detail.label}>
-                  <div className="contact-detail-icon">
+                <div
+                  className={styles.contactDetail}
+                  key={detail.label}
+                >
+                  <div className={styles.contactDetailIcon}>
                     <Icon size={21} />
                   </div>
 
@@ -139,8 +147,7 @@ export default function Contact() {
               );
             })}
 
-            {/* Social Brand Logos */}
-            <div className="contact-socials">
+            <div className={styles.contactSocials}>
               <a
                 href="https://github.com/sujay-707"
                 target="_blank"

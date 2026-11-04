@@ -1,0 +1,412 @@
+
+.aboutSection {
+  background: var(--white);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+/* About Introduction */
+
+.aboutIntro {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--blue-soft);
+}
+
+.aboutIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  background: var(--blue-light);
+  color: var(--primary);
+}
+
+.aboutIntro h3 {
+  margin: 0 0 17px;
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.aboutIntro p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Achievement Highlight */
+
+.aboutHighlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: 25px;
+  padding: 17px;
+  border: 1px solid #d8e8f8;
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--primary);
+}
+
+.aboutHighlight > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.aboutHighlight strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--navy);
+  font-size: 12px;
+}
+
+.aboutHighlight span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Education and Internship Cards */
+
+.aboutDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.aboutDetailCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--white);
+  transition: 0.2s ease;
+}
+
+.aboutDetailCard:hover {
+  border-color: #b9d7f2;
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.aboutDetailIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--blue-light);
+  color: var(--primary);
+}
+
+.aboutCardLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.aboutDetailCard h3 {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.aboutDetailCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.aboutCardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 13px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.aboutCardMeta span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.aboutCardMeta strong {
+  color: var(--primary-dark);
+  font-size: 11px;
+}
+
+/* Internship Statistics */
+
+.internshipStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 17px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.internshipStats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.internshipStats strong {
+  color: var(--primary);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.internshipStats span {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* Dark Theme */
+
+:global(html[data-theme="dark"]) .aboutSection {
+  background: #101827;
+}
+
+:global(html[data-theme="dark"]) .aboutIntro,
+:global(html[data-theme="dark"]) .aboutDetailCard {
+  background: #182437;
+  border-color: #2b3a50;
+}
+
+:global(html[data-theme="dark"]) .aboutIntro h3,
+:global(html[data-theme="dark"]) .aboutDetailCard h3,
+:global(html[data-theme="dark"]) .aboutHighlight strong {
+  color: #e5edf7;
+}
+
+:global(html[data-theme="dark"]) .aboutIcon,
+:global(html[data-theme="dark"]) .aboutDetailIcon {
+  background: #243b57;
+  color: #93c5fd;
+}
+
+:global(html[data-theme="dark"]) .aboutHighlight {
+  background: #182437;
+  border-color: #34445a;
+}
+
+:global(html[data-theme="dark"]) .aboutCardMeta,
+:global(html[data-theme="dark"]) .internshipStats {
+  border-color: #34445a;
+}
+
+:global(html[data-theme="dark"]) .aboutCardMeta strong,
+:global(html[data-theme="dark"]) .internshipStats strong {
+  color: #93c5fd;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .aboutIntro {
+    padding: 25px;
+  }
+
+  .aboutDetailCard {
+    padding: 19px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutIntro {
+    padding: 20px;
+  }
+
+  .aboutIntro h3 {
+    font-size: 20px;
+  }
+
+  .aboutDetailCard {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .aboutDetailIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .aboutDetailCard h3 {
+    font-size: 13px;
+  }
+
+  .internshipStats {
+    gap: 7px;
+  }
+
+  .internshipStats strong {
+    font-size: 15px;
+  }
+
+  .internshipStats span {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================
+   ABOUT SECTION - SPACE OPTIMIZATION
+========================= */
+
+/* Main two-column layout */
+
+.aboutGrid {
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 28px;
+}
+
+/* Left introduction card */
+
+.aboutIntro {
+  padding: 26px;
+}
+
+.aboutIcon {
+  margin-bottom: 17px;
+}
+
+.aboutIntro h3 {
+  margin-bottom: 13px;
+}
+
+.aboutIntro p {
+  margin-bottom: 11px;
+  line-height: 1.7;
+}
+
+/* Achievement card */
+
+.aboutHighlight {
+  margin-top: 18px;
+  padding: 13px 15px;
+}
+
+/* Right-side cards */
+
+.aboutDetails {
+  gap: 12px;
+}
+
+.aboutDetailCard {
+  padding: 18px 22px;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* IMPORTANT: Make content use the full available width */
+
+.aboutDetailCard > div:last-child {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Card text spacing */
+
+.aboutCardLabel {
+  margin-bottom: 5px;
+}
+
+.aboutDetailCard h3 {
+  margin-bottom: 4px;
+}
+
+.aboutDetailCard p {
+  line-height: 1.5;
+}
+
+/* Metadata */
+
+.aboutCardMeta {
+  margin-top: 9px;
+  padding-top: 9px;
+  width: 100%;
+}
+
+/* Internship statistics */
+
+.internshipStats {
+  margin-top: 11px;
+  padding-top: 11px;
+  gap: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .aboutIntro {
+    padding: 22px;
+  }
+
+  .aboutDetailCard {
+    padding: 17px;
+  }
+
+  .aboutDetails {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutIntro {
+    padding: 19px;
+  }
+
+  .aboutDetailCard {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .internshipStats {
+    gap: 7px;
+  }
+}
