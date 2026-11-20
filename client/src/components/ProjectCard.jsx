@@ -9,9 +9,10 @@ export default function ProjectCard({ project }) {
       <div className={styles.projectImageWrap}>
         <img
           src={project.image}
-          alt={`${project.title} preview`}
+          alt={`${project.title} project preview`}
           className={styles.projectImage}
           loading="lazy"
+          decoding="async"
         />
 
         {project.featured && (
@@ -22,7 +23,10 @@ export default function ProjectCard({ project }) {
       </div>
 
       <div className={styles.projectContent}>
-        <div className={styles.projectTech}>
+        <div
+          className={styles.projectTech}
+          aria-label="Technologies used"
+        >
           {project.technologies.map((technology) => (
             <span key={technology}>{technology}</span>
           ))}
@@ -37,16 +41,20 @@ export default function ProjectCard({ project }) {
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View ${project.title} live demo`}
           >
-            Live Demo <ArrowUpRight size={17} />
+            Live Demo
+            <ArrowUpRight size={17} aria-hidden="true" />
           </a>
 
           <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`View ${project.title} source code on GitHub`}
           >
-            <Code2 size={17} /> GitHub
+            <Code2 size={17} aria-hidden="true" />
+            GitHub
           </a>
         </div>
       </div>

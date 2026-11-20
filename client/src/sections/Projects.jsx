@@ -21,8 +21,8 @@ export default function Projects() {
           </h2>
 
           <p>
-            A selection of projects where I turn concepts into practical
-            web applications.
+            A selection of projects where I turn ideas into practical,
+            responsive web applications.
           </p>
         </div>
 
@@ -40,9 +40,10 @@ export default function Projects() {
             href="https://github.com/sujay-707"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Explore more projects on GitHub"
           >
             <FolderGit2 size={19} />
-            Explore More on GitHub
+            <span>Explore More on GitHub</span>
             <ArrowUpRight size={17} />
           </a>
         </div>

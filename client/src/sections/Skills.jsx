@@ -11,10 +11,10 @@ import styles from "./Skills.module.css";
 
 const skillGroups = [
   {
-    title: "Programming Languages",
-    description: "Languages I use to solve problems and build applications.",
+    title: "Languages",
+    description: "Programming languages for problem-solving and application development.",
     icon: Code2,
-    skills: ["Java", "JavaScript", "SQL", "C"],
+    skills: ["Java", "JavaScript", "SQL"],
   },
   {
     title: "Frontend Development",
@@ -30,7 +30,7 @@ const skillGroups = [
   },
   {
     title: "Backend Development",
-    description: "Developing server-side applications and APIs.",
+    description: "Developing server-side applications and RESTful APIs.",
     icon: Server,
     skills: [
       "Node.js",
@@ -40,14 +40,14 @@ const skillGroups = [
     ],
   },
   {
-    title: "Databases",
+    title: "Databases & Storage",
     description: "Working with relational and NoSQL databases.",
     icon: Database,
     skills: ["MongoDB", "MySQL"],
   },
   {
-    title: "Tools & Platforms",
-    description: "Tools I use throughout my development workflow.",
+    title: "Developer Tools & Platforms",
+    description: "Tools and platforms used in the development workflow.",
     icon: Wrench,
     skills: [
       "Git",
@@ -68,8 +68,6 @@ export default function Skills() {
     >
       <div className="section-container">
 
-        {/* Section Heading */}
-
         <div className="section-heading">
           <span className="section-eyebrow">
             MY TECHNICAL EXPERTISE
@@ -85,11 +83,8 @@ export default function Skills() {
           </p>
         </div>
 
-        {/* Skills Showcase */}
-
         <div className={styles.skillsShowcase}>
           <div className={styles.skillsGrid}>
-
             {skillGroups.map((group) => {
               const Icon = group.icon;
 
@@ -98,20 +93,14 @@ export default function Skills() {
                   className={styles.skillItem}
                   key={group.title}
                 >
-                  {/* Category Icon */}
-
                   <div className={styles.skillIcon}>
                     <Icon size={25} strokeWidth={2} />
                   </div>
-
-                  {/* Category Information */}
 
                   <div className={styles.skillContent}>
                     <h3>{group.title}</h3>
 
                     <p>{group.description}</p>
-
-                    {/* Technology Tags */}
 
                     <div className={styles.skillTags}>
                       {group.skills.map((skill) => (
@@ -124,7 +113,6 @@ export default function Skills() {
                 </article>
               );
             })}
-
           </div>
         </div>
 

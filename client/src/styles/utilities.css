@@ -50,8 +50,7 @@
 }
 
 /* Dark Theme */
-
-:global(html[data-theme="dark"]) .section-heading h2 {
+html[data-theme="dark"] .section-heading h2 {
   color: #f1f5f9;
 }
 

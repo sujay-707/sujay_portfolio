@@ -2,12 +2,32 @@
 const projects = [
   {
     id: 1,
+    title: "CineLockz",
+    category: "Full Stack Development",
+    description:
+      "A full-stack cinema booking platform featuring movie listings, theatre management, show scheduling, interactive seat selection, JWT authentication, seat locking, booking validation, demo payments, QR ticket generation and backend ticket verification.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "REST APIs",
+    ],
+    image: "/projects/cinelockz.png",
+    live: "https://cinelockz.onrender.com",
+    github: "https://github.com/sujay-707/Cine-lockz",
+    featured: true,
+  },
+  {
+    id: 2,
     title: "Sthala",
     category: "Full Stack Development",
     description:
-      "A full-stack accommodation booking platform featuring property discovery, search and filters, authentication, wishlists, reservations, QR-based digital stay tickets and simulated checkout.",
+      "A full-stack accommodation booking platform featuring property discovery, search, filters, listing details, wishlists, reservations, JWT authentication, simulated checkout, QR-based digital stay tickets and reviews.",
     technologies: [
       "React.js",
+      "Tailwind CSS",
       "Node.js",
       "Express.js",
       "MongoDB",
@@ -19,29 +39,11 @@ const projects = [
     featured: true,
   },
   {
-    id: 2,
-    title: "CineLock",
-    category: "Frontend Development",
-    description:
-      "A responsive movie ticket booking interface with dynamic seat selection, reusable React components, QR ticket generation and simulated checkout.",
-    technologies: [
-      "React.js",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Bootstrap",
-    ],
-    image: "/projects/cinelock.png",
-    live: "https://cinelockz.netlify.app",
-    github: "https://github.com/sujay-707/CineLockz",
-    featured: true,
-  },
-  {
     id: 3,
     title: "Spotify Web Music Player",
     category: "Frontend Development",
     description:
-      "A responsive web music player UI inspired by modern streaming platforms like Spotify, featuring a clean interface and responsive layouts built with CSS Grid and Flexbox.",
+      "A responsive music player interface inspired by modern streaming platforms, featuring a clean layout built with CSS Grid and Flexbox.",
     technologies: [
       "HTML5",
       "CSS3",
